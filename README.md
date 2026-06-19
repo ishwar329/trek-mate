@@ -2,15 +2,15 @@
 
 ### 🏠 Home Page
 
-![Home Page](screenshots/home-page.png)
+![Home Page](home-page.png)
 
 ### 🔐 Login Page
 
-![Login Page](screenshots/login-page.png)
+![Login Page](login-page.png)
 
 ### 📞 Contact Page
 
-![Contact Page](screenshots/contact-page.png)
+![Contact Page](contact-page.png)
 
 ---
 
