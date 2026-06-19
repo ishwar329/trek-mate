@@ -1,0 +1,23 @@
+stages:
+  - build
+  - push_to_dockerhub
+  - deploy
+
+build_job:
+  stage: build
+  script:
+    - docker build -t trek_mate:latest .
+  
+push_job:
+  stage: push_to_dockerhub
+  script:
+    - docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASS
+    - docker image tag expenses-tracker:latest $DOCKERHUB_USER/trek_mate:latest
+    - docker push $DOCKERHUB_USER/trek_mate:latest
+  tags:
+    - linux
+
+deploy_job:
+  stage: deploy
+  script:
+    - docker compose up -d
