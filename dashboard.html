@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - TrekMate</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <h2>🌄 TrekMate</h2>
+
+        <ul>
+            <li><i class="fa-solid fa-chart-line"></i> Dashboard</li>
+            <li><i class="fa-solid fa-mountain"></i> Treks</li>
+            <li><i class="fa-solid fa-calendar-check"></i> Bookings</li>
+            <li><i class="fa-solid fa-users"></i> Users</li>
+            <li><i class="fa-solid fa-image"></i> Gallery</li>
+            <li><i class="fa-solid fa-gear"></i> Settings</li>
+            <li><i class="fa-solid fa-right-from-bracket"></i> Logout</li>
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <h1>Dashboard Overview</h1>
+
+        <div class="cards">
+
+            <div class="card">
+                <i class="fa-solid fa-users"></i>
+                <h2>1,245</h2>
+                <p>Total Users</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-calendar-check"></i>
+                <h2>540</h2>
+                <p>Total Bookings</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-mountain"></i>
+                <h2>18</h2>
+                <p>Available Treks</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+                <h2>₹2.4L</h2>
+                <p>Total Revenue</p>
+            </div>
+
+        </div>
+
+        <div class="recent-bookings">
+
+            <h2>Recent Bookings</h2>
+
+            <table>
+
+                <tr>
+                    <th>Name</th>
+                    <th>Trek</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>Ishwar Gosavi</td>
+                    <td>Rajgad Trek</td>
+                    <td>20 Jun 2026</td>
+                    <td><span class="success">Confirmed</span></td>
+                </tr>
+
+                <tr>
+                    <td>Rahul Patil</td>
+                    <td>Kalsubai Trek</td>
+                    <td>22 Jun 2026</td>
+                    <td><span class="pending">Pending</span></td>
+                </tr>
+
+                <tr>
+                    <td>Priya Sharma</td>
+                    <td>Torna Trek</td>
+                    <td>25 Jun 2026</td>
+                    <td><span class="success">Confirmed</span></td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
