@@ -1,0 +1,48 @@
+services:
+    nginx:
+        build: ./nginx
+        image: nginx
+        container_name: "nginx_cont"
+        ports:
+            - "80:80"
+        restart: always
+        depends_on:
+            - trek_mate
+        networks:
+            - trek_nw
+    
+    trek_mate:
+        build:
+            context: .
+        image: trek_mate
+        container_name: "trek_cont"
+        ports:
+            - "8000:80"
+        depends_on:
+            - db
+        restart: always
+        networks:
+            - trek_nw
+    
+    db:
+        image: mysql
+        container_name: "db_cont"
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_DATABASE=test_db
+        volumes:
+            - db-data:/var/lib/mysql
+        healthcheck:
+            test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot"]
+            interval: 10s
+            timeout: 5s
+            retries: 2
+            start_period: 60s
+        networks:
+            - trek_nw
+
+volumes:
+    db-data:
+
+networks:
+    trek_nw:
