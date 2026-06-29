@@ -4,7 +4,7 @@
   "description": "Trek booking application",
   "main": "index.js",
   "scripts": {
-    "build": "echo 'Build complete' && mkdir -p dist && cp *.html dist/ && cp -r css dist/ && cp -r js dist/ && cp -r images dist/"
+    "build": "echo 'Build complete' && mkdir -p dist && cp frontend/*.html dist/ && cp -r css dist/ && cp -r js dist/ && cp -r images dist/"
   },
   "keywords": ["trek", "booking"],
   "author": "",
